@@ -30,3 +30,8 @@ get '/do_refactor' do
 
   erb :do_refactor
 end
+
+get '/new_feature' do
+
+  erb :new_feature
+end
