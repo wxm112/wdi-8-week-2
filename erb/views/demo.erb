@@ -1,0 +1,29 @@
+<h1>Hello world</h1>
+ 
+ 4 + 3
+
+<br>
+ <%=4 + 3 %>
+ <br>
+
+<!-- The @ is very importent, you cannot access rb vairalbe without @ in erb document. -->
+ 
+ <%= @groucho %>
+
+<br>
+ <img src="<%= @kitten %>">
+<br>
+The result is: <% puts 4+3 %> <!-- non echoing embeded ruby -->
+<br>
+<% if @debug_mode %>
+<h1>DEBUG MODE IS ON!</h1>
+<% else %>
+<h1>Nothing unusual</h1>
+<% end %>
+
+<% 5.times do %>
+<h2>goldfish</h2>
+<% end %>
+
+<!-- 
+<%= thing %> will print the thing on the screen. While <% thing %> will not but you can see the information in terminal.  -->
