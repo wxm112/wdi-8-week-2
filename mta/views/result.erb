@@ -1,0 +1,23 @@
+<h1>There are <%= @stations_num %> staitons. Plese see the station details below: </h1>
+
+<% @stations.each do |s| %>
+<div class="stations">
+    <h2><%= s %></h2>
+</div>
+<% end %>
+
+<br>
+start_line: <%= @start_line %>
+<br>
+start_station: <%= @start_station %>
+<br>
+destination_line: <%= @destination_line %>
+<br>
+destination_station: <%= @destination_station %>
+<br>
+<%= @stations %>
+<br>
+<%= @stations_num %>
+
+
+<%= erb :home, :layout => false %>
