@@ -42,3 +42,4 @@ db.close
 people.each do |p|
     puts p.to_s
 end
+
