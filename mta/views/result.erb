@@ -1,14 +1,11 @@
-<h1>There are <%= @stations_num %> staitons. Plese see the station details below: </h1>
+<h1>There are <%= @stations_num %> stations. Plese see the station details below: </h1>
 
-<% @stations.each do |s| %>
 <div class="stations">
     <ul>
-    <li><%= s %></li>
+<% @stations.each_with_index do |s, i| %>
+    <li class="<%= i != (@stations.length-1) ? 'between' : '' %>"><%= s %></li>
+<% end %>
     </ul>
 </div>
-<% end %>
-
-
-
 
 <%= erb :home, :layout => false %>

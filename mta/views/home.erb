@@ -1,38 +1,27 @@
 <h1>Please elect your start station and destination station: </h1>
 
 <form action="result">
-    <p>
-
     <label for="start_point">Satart point </label>
     <select name="start_point" id="start_point">
-        <% LINES['line n'].each do |s| %>
-        <option ><%= "Line N: " +s %></option>
-            <% end %>
-        <% LINES['line l'].each do |s| %>
-        <option ><%= "Line L: " +s %></option>
-            <% end %>
-            <% LINES['line 6'].each do |s| %>
-        <option ><%= "Line 6: " +s %></option>
-            <% end %>
+        <% LINES.each_key do |line| %>
+            <optgroup label="<%= line.upcase %>">
+                <% LINES[line].each do |s| %>
+                    <option value="<%= "#{line.downcase}: #{s}" %>"><%= s %></option>
+                <% end %>
+            </optgroup>
+        <% end %>
     </select>
-    
-    </p>
-
-    <p>
 
     <label for="destination_point">Destination point </label>
     <select name="destination_point" id="destination_point">
-        <% LINES['line n'].each do |s| %>
-        <option ><%= "Line N: " +s %></option>
-            <% end %>
-        <% LINES['line l'].each do |s| %>
-        <option ><%= "Line L: " +s %></option>
-            <% end %>
-            <% LINES['line 6'].each do |s| %>
-        <option ><%= "Line 6: " +s %></option>
-            <% end %>
+        <% LINES.each_key do |line| %>
+            <optgroup label="<%= line.upcase %>">
+                <% LINES[line].each do |s| %>
+                    <option value="<%= "#{line.downcase}: #{s}" %>"><%= s %></option>
+                <% end %>
+            </optgroup>
+        <% end %>
     </select>
-    </p>
     <p>
     <button>Submit</button> 
     </p>
