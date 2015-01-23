@@ -1,0 +1,10 @@
+body {
+    background-color: linen;
+    color: green;
+}
+
+.receipt {
+    border: 1px solid white;
+    margin-bottom: iem;
+    padding: 1em;
+}
