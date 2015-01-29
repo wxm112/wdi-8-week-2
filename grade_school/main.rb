@@ -16,13 +16,17 @@ class School
         @db[grade]
     end
 
+    def sort
+        @db.each {|k,v| v.sort!}.sort.to_h
+    end
+
 end
 
 require 'pry'
 p school = School.new("Haleakala Hippy School")
 p school.db
 p school.add("James", 2)
-p school.add("Phil", 2)
+p school.add("Blair", 2)
 p school.add("Jennifer", 3)
 p school.add("Little Billy", 1)
 school.db
